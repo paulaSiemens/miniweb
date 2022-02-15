@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    box-sizing: border-box;
+    font-size: medium;
+  }
+  
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-style: initial;
+    font-size: 50px;
+    font-stretch: extra-expanded;
+    color: black;
+  }
+
+  .navbar-item {
+    list-style-type: style;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    margin-left: 80%;
+    padding-top: 20px;
+  }
+  
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .menu-item {
+    font-family: 'Poppins', sans-serif;
+    font-style: initial;
+    font-size: 20px;
+    font-stretch: extra-expanded;
+    color: black;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  
+  /* div{
+    border: 1px solid red;
+  }
+  span{
+    border: 1px solid greenyellow;
+  }
+   */
+  
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-style: initial;
+    font-size: 20px;
+    font-stretch: extra-expanded;
+    color: black;
+    padding-bottom: 10px;
+    margin-top: 20px;
+  }
+  h1,h2,h3,h4, h5{
+    margin-top: 20px;
+    font-weight: 500;
+  }
+  
+  .corousel {
+    position: relative;
+  }
+  
+  .carousel-indicators li {
+    /* defines the shape of indicators - rounded */
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+  
+  .carousel_image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover; /* the image will be clip to fit in given size, it will also resize with the  browser window */
+    object-position: 60% 10%; /* this positioning the part of picture we want to display/ scale x y */
+  }
+  
+  .commercial {
+    color: #fbfcfd;
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .all-products-main{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-right: 60px;
+    padding-top: 40px;
+  }
+  
+  
+  button {
+    color: #fbfcfd;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid#fff;
+    outline: none;
+    cursor: pointer;
+  }
+  /*----------------forHim---------------*/
+  
+  
+  .main-container{
+    display: flex
+  }
+  
+  .cover-container{
+    width: 40%;
+    padding-top: 80px;
+    height: auto;
+    margin-left: 60px;
+  }
+  
+  .cover-image {
+    
+    width: 100%;
+    height: auto;
+    
+  }
+  
+  .cover-footer{
+    
+    height: 200px;
+    width: 100%;
+    
+    font-family:'Poppins', sans-serif ;
+  }
+  
+  
+  h6{
+    font-weight: 100;
+    font-size: small;
+    font-family:'Poppins', sans-serif ;
+    
+  }
+  h5{
+    font-weight: 300;
+    font-size: medium;
+    font-family:'Poppins', sans-serif ;
+  }
+  .all-products{
+    
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-right: 60px;
+    padding-top: 40px;
+  }
+  .all-products-2{
+    
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    width: 96%;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-top: 20px;
+  }
+  .product{
+    justify-content: space-around;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+  }
+  
+  .product-image{
+    width: 100%;
+  }
+    
+  
+/*---------------Single product----------------*/
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex:auto;
+}
+
+/* .container .carousel-item {
+    align-items: center;
+} */
+
+.newarrival {
+    background: green;
+    width: 50px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-stretch: extra-expanded;
+}
+
+
+.col-md-7 h2 {
+    color: #555;
+    padding-right: 30px;
+    width: auto;
+}
+
+.price{
+    color: #519e09;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+input {
+    border: 1px solid #ccc;
+    font-weight: bold;
+    height: 33px;
+    text-align: center;
+    width: 30px;
+
+}
+
+.cart{
+    background: white;
+    color: black;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+
+/* ------------- Cart page -----------*/
+
+.cart-page {
+    margin: 10%;
+    align-items: center;
+}
+
+.section-header {
+    font-family: 'Poppins', sans-serif ;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 10px;
+    margin-left: 100px;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 50%;
+    height: 50%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.btn-danger {
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+.cart-item .cart-column{
+  width: 50%;
+  height: 50%;
+}
+
+.cart-item-title {
+    padding-left: 30px;
+}
+
+.cart-item-img{
+    width: 10%;
+    height: 10%;
+}
+.cart-item-img:hover {
+    transform: scale(5);
+    border: blue;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-quantity-input {
+    width: 10%
+}
+
+.btn-danger {
+    color: white;
+    background-color: #860000;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    height: 30px;
+    font-size: 12px;
+    padding: 30px;
+}
+
+.cart-total {
+  margin-top: 2%;
+}
+
+/* Footer  */
+
+.page-footer {
+  padding: 10%;
+}
+
