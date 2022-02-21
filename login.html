@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="cart.js"></script>
+  
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <div class="container" style="margin:5px">
+        <h3>Please login to your account</h3>
+        <form action='index.html'>
+        <label for="fname">First name:</label><br />
+        <input class="form-control" type="text" id="fname" name="fname" value="" /><br />
+        <label for="lname">Last name:</label><br />
+        <input class="form-control" type="text" id="lname" name="lname" value="" /><br /><br />
+        <input class="btn btn-primary" type="submit" onclick="store()" value="Login" />
+        <input type="button" class="btn btn-secondary" value="Cancel" onclick="history.back(-1)" />
+        </div>
+      </form>
+    </div>
+
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+
+
+</body>
+
+</html>

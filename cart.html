@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,72 +16,95 @@
 
 
     <!-----------  Taken from index.html ----------->
-    <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    </link>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"></link>
-    <link rel="stylesheet" href="css/style.css"></link>
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </link>
+    <link rel="stylesheet" href="css/style.css">
+    </link>
+
+
 </head>
+
 <body>
 
-<!---------------- Navigation bar ------------------->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <!---------------- Navigation bar ------------------->
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
 
-        <div class="navbar-nav">
-            <a class="nav-item nav-link " aria-current="page" href="#"><i class="material-icons">person</i></a>
-            <a class="nav-item nav-link" href="#"><i class="material-icons">favorite</i></a>
-            <a class="nav-item nav-link" href="#"><i class="material-icons">local_grocery_store</i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <div class="navbar-nav">
+                <a class="nav-item nav-link " aria-current="page" href="login.html"><i
+                        class="material-icons">person</i></a>
+                <a class="nav-item nav-link" href="#"><i class="material-icons">favorite</i></a>
+                <a class="nav-item nav-link" href="cart.html"><i class="material-icons">local_grocery_store</i></a>
+            </div>
         </div>
+    </nav>
+
+    <!-------------------- Web title and categories ----------------->
+
+    <div class="text-center">
+        <a class="menu-item" href="/forHim.html" id="menu-him"><span>For Him</span></a>
+        <a href="/index.html" class="logo"><span>Hot&Hat</span></a>
+        <a href="/forHer.html" class="menu-item" id="menu-her"><span>For Her</span></a>
     </div>
-</nav>
 
-<!-------------------- Web title and categories ----------------->
-
-<div class="text-center">
-    <a class="menu-item" href="/forHim.html" id="menu-him"><span>For Him</span></a>
-    <a href="/index.html" class="logo"><span>Hot&Hat</span></a>
-    <a href="/forHer.html" class="menu-item" id="menu-her"><span>For Her</span></a>
-</div>
-
-<h1 style="text-align: center;" id="message">Hand made hats</h1>
+    <h1 style="text-align: center;" id="message">Hand made hats</h1>
 
 
-<!------------------------------- Cart ----------------------------->
 
-        <section class="cart-page">
-            <h2 class="section-header">CART</h2>
-            <div class="cart-row">
-                <span class="cart-item cart-header cart-column">ITEM</span>
-                <span class="cart-price cart-header cart-column">PRICE</span>
-                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-            </div>
-            <div class="cart-items">
-     
-            </div>
-    
-            <div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">$0</span>
-            </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-        </section>
-        
 
-</div>
 
-<div class="page-footer">
-        
-</div>
+    <!------------------------------- Cart ----------------------------->
 
+    <section class="cart-page">
+        <h2 id="messs" class="section-header">CART</h2>
+
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+
+        </div>
+
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+    </section>
+
+
+    </div>
+
+    <div class="page-footer">
+
+    </div>
+    <script>document.body.onload = addUserNamee();
+        function addUserNamee() {
+            const userName = sessionStorage.fname;
+            if (userName !== undefined) {
+                document.getElementById("messs").innerHTML = sessionStorage.fname + ' ' + sessionStorage.lname + ', here is your cart!';
+            }
+            else {
+                document.getElementById("messs").innerHTML = 'Cart';
+            }
+        }
+    </script>
 </body>
+
 </html>
