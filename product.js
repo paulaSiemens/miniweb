@@ -9,10 +9,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
 const CART = {
     KEY: "testKey",
     contents: [], 
-    idCounter: 0,
+    idCounter: 10,
     init() {
       //check localStorage and initialize the contents of CART.contents
+     
       let _contents = localStorage.getItem(CART.KEY);
+      let idIncrment = localStorage.getItem("id");
+      if (!idIncrment) localStorage.setItem("id",0); 
       if(_contents) { 
         CART.contents = JSON.parse(_contents); 
       } else {
@@ -22,9 +25,11 @@ const CART = {
       }
     },
   
-    addProduct(image, title, quantity, price){
-      this.idCounter++;
-      let obj = {id:this.idCounter, image:image, title:title, qty:quantity, itemPrice:price};
+    addProduct(image, title, quantity, price) {
+      let curId = Number.parseInt(localStorage.getItem("id"));
+      localStorage.setItem("id",curId+1)
+  
+      let obj = { id: curId, image: image, title: title, qty: quantity, itemPrice: price };
       this.contents.push(obj);
     },
   
@@ -96,9 +101,13 @@ const CART = {
     
     remove(id) {
       //remove item entirely from CART.contens based on its id
-      CART.contents = CART.contents.filter(item=>{
-        if(item.id !== id)
-          return true;
+      CART.contents = CART.contents.filter(item => {
+        console.log("Remove in product was pressed")
+        return (item.id == id) ? true : false; 
+        
+        // if (item.id !== id) {
+        //   // console.log(`Compare was: ${item.id !== id}´)
+        //   return false;}
       });
       //update localStorage
       CART.sync()

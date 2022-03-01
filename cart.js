@@ -37,6 +37,8 @@ const CART = {
     console.log("Hello")
     //check localStorage and initialize the contents of CART.contents
     let _contents = localStorage.getItem(CART.KEY);
+    let idIncrment = localStorage.getItem("id");
+    if (!idIncrment) localStorage.setItem("id", 0);
     console.log(_contents)
     if (_contents) {
       CART.contents = JSON.parse(_contents);
@@ -48,8 +50,10 @@ const CART = {
   },
 
   addProduct(image, title, quantity, price) {
-    this.idCounter++;
-    let obj = { id: this.idCounter, image: image, title: title, qty: quantity, itemPrice: price };
+    let curId = Number.parseInt(localStorage.getItem("id"));
+    localStorage.setItem("id", curId + 1)
+
+    let obj = { id: curId, image: image, title: title, qty: quantity, itemPrice: price };
     this.contents.push(obj);
   },
 
@@ -122,8 +126,12 @@ const CART = {
   remove(id) {
     //remove item entirely from CART.contens based on its id
     CART.contents = CART.contents.filter(item => {
-      if (item.id !== id)
-        return true;
+      console.log("Remove was pressed");
+      return (item.id === id) ? false : true;
+
+      // if (item.id !== id) {
+      //   // console.log(`Compare was: ${item.id !== id}´)
+      //   return false;}
     });
     //update localStorage
     CART.sync()
@@ -194,16 +202,21 @@ function showProducts(contents) {
     quantityCol.className = "cart-quantity cart-column"
 
     let quantity = document.createElement("input");
+   
     quantity.value = product.qty;
     quantity.className = "cart-quantity-input"
     quantityCol.appendChild(quantity);
+
 
     //add remove button
     let btn = document.createElement("button");
     btn.className = "btn btn-danger";
     btn.textContent = "Remove";
     btn.setAttribute("data-id", product.id);
-    btn.addEventListener("click", CART.remove); //make this a removeItem function
+    btn.addEventListener("click", () => {
+      CART.remove(product.id);location.reload();
+    });
+     //make this a removeItem function
     quantityCol.appendChild(btn);
     row.appendChild(quantityCol);
 
@@ -232,6 +245,6 @@ function store() {
   sessionStorage.setItem("lname", inputLname.value);
 }
 
-function getUserName(){
-  return 
+function getUserName() {
+  return
 }
